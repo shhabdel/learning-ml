@@ -1,0 +1,7 @@
+## Single Layer Perceptrons
+
+- The first sub-project is the logical-op perceptron. We train a single-layer perceptron to accuratly predict the outcome of the "logical or" and "logical and" operations. Since there are only 4 possibilities and they are all used in training the perceptron, it will accruatly predict the result for any future operations. 
+
+- The second sub-project is the Pima Indian Diabities perceptron. It uses 8 factors in predicting whether a person has diabities. The dataset contains 0 if the attribute is not available. To get more accurate results, we first replace those 0's with the mean value of that attribute. Then, we use random small values as initial values for the weights and 1 for the bias. We go through the dataset 50 times and if the perceptron accuratly predicts the outcome, we do not change the weights. If it predicts a 0 when the correct output is 1, we add the data point to the weights to stir the weights vector towards the the data point. On the other hand, if it predicts a 1 and the correct output is 0, we subtract the data point from the weights to stir the weights vector away from the data point.      
+
+    To calculate the error on the test data set, we go through the test data and we add the difference between our prediction and the actual output. We calculate the accuracy as the precentage of the test dataset that the perceptron got correct. 
